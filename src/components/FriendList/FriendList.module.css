@@ -19,6 +19,11 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.item:hover {
+  background-color: rgb(138, 189, 255);
+  cursor: pointer;
+}
+
 .item:last-child {
   margin-bottom: 0;
 }

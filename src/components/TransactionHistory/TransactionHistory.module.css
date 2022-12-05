@@ -1,40 +1,102 @@
-.transactionHistory {
-  width: 800px;
-  border-collapse: collapse;
-  text-align: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border-radius: 0.5rem 0.5rem 0 0;
-  overflow: hidden;
-  margin: 150px auto;
+:root {
+  --tablewidth: 800px;
 }
 
-.transactionHistory th {
+.transactionHistoryContainer {
+  width: var(--tablewidth);
+  margin: 150px auto;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.6);
+}
+
+.transactionHistory {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+thead {
+  display: block;
+}
+
+th {
   text-transform: uppercase;
   background-color: rgb(76, 161, 231);
   color: white;
   border: 1px solid rgba(192, 192, 192, 0.6);
   width: calc(100% / 3);
+  cursor: auto;
 }
 
-.transactionHistory th:not(:last-child) {
+th:not(:last-child) {
   border-right: 1px solid rgba(255, 255, 255, 0.692);
 }
 
-.transactionHistory tr {
+tbody {
+  height: 360px;
+  overflow-y: scroll;
+  display: block;
+  scrollbar-gutter: stable;
+}
+
+tbody::-webkit-scrollbar {
+  width: 7px;
+  background-color: rgb(202, 202, 202);
+}
+
+tbody::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border-radius: 2.5px;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  border-radius: 2.5px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(122, 153, 217)),
+    color-stop(0.72, rgb(73, 125, 189)),
+    color-stop(0.86, rgb(28, 58, 148))
+  );
+}
+
+th {
+  width: calc((var(--tablewidth) - 5px) / 3);
+  height: 40px;
+}
+th:last-child {
+  width: calc((var(--tablewidth) - 5px) / 3 + 5px);
+}
+
+td {
+  width: calc(var(--tablewidth) / 3);
   height: 40px;
 }
 
-.transactionHistory tr:nth-child(odd) {
+tr:nth-child(odd) {
   background-color: rgb(230, 238, 253);
 }
 
-.transactionHistory td {
+tr:hover {
+  background-color: rgb(138, 189, 255);
+  cursor: pointer;
+}
+
+tr:hover td {
+  color: white;
+  font-weight: 700;
+}
+
+td {
   border: 1px solid rgba(192, 192, 192, 0.6);
   text-transform: capitalize;
   color: gray;
 }
 
-.transactionHistory tr td:first-child {
+td:first-child {
   text-align: left;
   padding-left: 90px;
 }
