@@ -5,7 +5,7 @@
   margin: 0 auto;
   padding: 0;
   list-style: none;
-  margin: 200px auto;
+  margin: 150px auto;
 }
 
 .item {
@@ -28,12 +28,13 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: green;
+  background-color: rgb(0, 170, 0);
+  margin-left: 5px;
 }
 
 .offline {
   composes: online;
-  background-color: red;
+  background-color: rgb(253, 60, 60);
 }
 
 .avatar {

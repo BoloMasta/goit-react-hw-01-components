@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import css from './FriendList.module.css';
 
+// FriendListItem component
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <li className={css.item}>
@@ -10,6 +12,7 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
   );
 };
 
+// FriendList component
 export const FriendList = ({ friends }) => {
   return (
     <ul className={css.friendList}>
@@ -23,4 +26,16 @@ export const FriendList = ({ friends }) => {
       ))}
     </ul>
   );
+};
+
+// PropTypes
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    }).isRequired
+  ),
 };

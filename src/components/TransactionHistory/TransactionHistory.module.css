@@ -1,11 +1,11 @@
 .transactionHistory {
   width: 800px;
-  margin: 100px auto;
   border-collapse: collapse;
   text-align: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 0.5rem 0.5rem 0 0;
   overflow: hidden;
+  margin: 150px auto;
 }
 
 .transactionHistory th {
@@ -36,5 +36,5 @@
 
 .transactionHistory tr td:first-child {
   text-align: left;
-  padding-left: 100px;
+  padding-left: 90px;
 }

@@ -9,8 +9,8 @@
   border-radius: 0.7rem;
   border: 1px solid rgb(168, 168, 168);
   overflow: hidden;
-  margin: 100px auto;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+  margin: 150px auto;
 }
 
 .description {
